@@ -310,8 +310,12 @@ $(function () {
     };
     const editCursor = e => {
         const { clientX: x, clientY: y } = e;
-        cursor.style.left = x + 'px';
-        cursor.style.top = y + 'px';
+        if (cursor) { // Check if cursor is not null
+            cursor.style.left = x + 'px';
+            cursor.style.top = y + 'px';
+        } else {
+            console.error('Cursor element not found');
+        }
     };
     link.forEach(b => b.addEventListener('mousemove', animateit));
     link.forEach(b => b.addEventListener('mouseleave', animateit));
@@ -439,37 +443,40 @@ $(document).ready(function () {
     "use strict";
 
     var progressPath = document.querySelector('.progress-wrap path');
-    var pathLength = progressPath.getTotalLength();
-    progressPath.style.transition = progressPath.style.WebkitTransition = 'none';
-    progressPath.style.strokeDasharray = pathLength + ' ' + pathLength;
-    progressPath.style.strokeDashoffset = pathLength;
-    progressPath.getBoundingClientRect();
-    progressPath.style.transition = progressPath.style.WebkitTransition = 'stroke-dashoffset 10ms linear';
-    var updateProgress = function () {
-        var scroll = $(window).scrollTop();
-        var height = $(document).height() - $(window).height();
-        var progress = pathLength - (scroll * pathLength / height);
-        progressPath.style.strokeDashoffset = progress;
-    }
-    updateProgress();
-    $(window).scroll(updateProgress);
-    var offset = 150;
-    var duration = 550;
-    jQuery(window).on('scroll', function () {
-        if (jQuery(this).scrollTop() > offset) {
-            jQuery('.progress-wrap').addClass('active-progress');
-        } else {
-            jQuery('.progress-wrap').removeClass('active-progress');
+    if (progressPath) { // Check if progressPath is not null
+        var pathLength = progressPath.getTotalLength();
+        progressPath.style.transition = progressPath.style.WebkitTransition = 'none';
+        progressPath.style.strokeDasharray = pathLength + ' ' + pathLength;
+        progressPath.style.strokeDashoffset = pathLength;
+        progressPath.getBoundingClientRect();
+        progressPath.style.transition = progressPath.style.WebkitTransition = 'stroke-dashoffset 10ms linear';
+        var updateProgress = function () {
+            var scroll = $(window).scrollTop();
+            var height = $(document).height() - $(window).height();
+            var progress = pathLength - (scroll * pathLength / height);
+            progressPath.style.strokeDashoffset = progress;
         }
-    });
-    jQuery('.progress-wrap').on('click', function (event) {
-        event.preventDefault();
-        jQuery('html, body').animate({ scrollTop: 0 }, duration);
-        return false;
-    })
+        updateProgress();
+        $(window).scroll(updateProgress);
+        var offset = 150;
+        var duration = 550;
+        jQuery(window).on('scroll', function () {
+            if (jQuery(this).scrollTop() > offset) {
+                jQuery('.progress-wrap').addClass('active-progress');
+            } else {
+                jQuery('.progress-wrap').removeClass('active-progress');
+            }
+        });
+        jQuery('.progress-wrap').on('click', function (event) {
+            event.preventDefault();
+            jQuery('html, body').animate({ scrollTop: 0 }, duration);
+            return false;
+        });
+    } else {
+        console.error('Progress path element not found');
+    }
 
 });
-
 
 
 /* =============================================================================
@@ -496,39 +503,43 @@ $(function () {
     ============================================================================= */
 
     const svg = document.getElementById("svg");
-    const tl = gsap.timeline();
-    const curve = "M0 502S175 272 500 272s500 230 500 230V0H0Z";
-    const flat = "M0 2S175 1 500 1s500 1 500 1V0H0Z";
+    if (svg) { // Check if svg is not null
+        const tl = gsap.timeline();
+        const curve = "M0 502S175 272 500 272s500 230 500 230V0H0Z";
+        const flat = "M0 2S175 1 500 1s500 1 500 1V0H0Z";
 
-    tl.to(".loader-wrap-heading .load-text , .loader-wrap-heading .cont", {
-        delay: 1.5,
-        y: -100,
-        opacity: 0,
-    });
-    tl.to(svg, {
-        duration: 0.5,
-        attr: { d: curve },
-        ease: "power2.easeIn",
-    }).to(svg, {
-        duration: 0.5,
-        attr: { d: flat },
-        ease: "power2.easeOut",
-    });
-    tl.to(".loader-wrap", {
-        y: -1500,
-    });
-    tl.to(".loader-wrap", {
-        zIndex: -1,
-        display: "none",
-    });
-    tl.from(
-        "header .container",
-        {
-            y: 100,
+        tl.to(".loader-wrap-heading .load-text , .loader-wrap-heading .cont", {
+            delay: 1.5,
+            y: -100,
             opacity: 0,
-            delay: 0.3,
-        },
-        "-=1.5"
-    );
+        });
+        tl.to(svg, {
+            duration: 0.5,
+            attr: { d: curve },
+            ease: "power2.easeIn",
+        }).to(svg, {
+            duration: 0.5,
+            attr: { d: flat },
+            ease: "power2.easeOut",
+        });
+        tl.to(".loader-wrap", {
+            y: -1500,
+        });
+        tl.to(".loader-wrap", {
+            zIndex: -1,
+            display: "none",
+        });
+        tl.from(
+            "header .container",
+            {
+                y: 100,
+                opacity: 0,
+                delay: 0.3,
+            },
+            "-=1.5"
+        );
+    } else {
+        console.error('SVG element not found');
+    }
 
 });

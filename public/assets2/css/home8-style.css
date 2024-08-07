@@ -87,13 +87,13 @@
   z-index: 4;
 }
 .header-cst .caption h1 {
-  font-size: 28vw;
+  font-size: 10vw;
   font-weight: 500;
   line-height: 1;
   text-transform: uppercase;
-  -webkit-transform: scaleX(1.5);
-      -ms-transform: scaleX(1.5);
-          transform: scaleX(1.5);
+  -webkit-transform: scaleX(1);
+      -ms-transform: scaleX(1);
+          transform: scaleX(1);
   -webkit-transition: all 1s ease;
   -o-transition: all 1s ease;
   transition: all 1s ease;
@@ -102,9 +102,48 @@
           transition-delay: 2s;
 }
 .header-cst .caption h1.normal {
-  -webkit-transform: scaleX(1);
-      -ms-transform: scaleX(1);
-          transform: scaleX(1);
+  font-size: 5vw;
+  -webkit-transform: scaleX(1.5);
+      -ms-transform: scaleX(1.5);
+          transform: scaleX(1.5);
+}
+.header-cst .caption h1 {
+  animation: fontShrink 5s ease-in-out;
+}
+
+@keyframes fontShrink {
+  0% {
+    font-size: 20vw;
+  }
+  100% {
+    font-size: 10vw;
+  }
+}
+
+/* Layer untuk mobile devices */
+@media (max-width: 768px) {
+  .header-cst .img {
+    height: 300px;
+  }
+  .header-cst .caption {
+    margin-top: -150px;
+  }
+  .header-cst .caption h1 {
+    font-size: 20vw;
+    animation: fontShrinkMobile 5s ease-in-out forwards;
+  }
+  .header-cst .caption h1.normal {
+    font-size: 60vw;
+  }
+}
+
+@keyframes fontShrinkMobile {
+  0% {
+    font-size: 40vw;
+  }
+  100% {
+    font-size: 20vw;
+  }
 }
 
 /* --------------- Intro --------------- */

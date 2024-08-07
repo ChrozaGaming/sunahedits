@@ -1,4 +1,3 @@
-
 $(function () {
   var width = $(window).width();
   if (width > 991) {
@@ -9,17 +8,21 @@ $(function () {
 
     let sections = gsap.utils.toArray(".panel");
 
-    gsap.to(sections, {
-      xPercent: -100 * (sections.length - 1),
-      ease: "none",
-      scrollTrigger: {
-        trigger: ".thecontainer",
-        pin: true,
-        scrub: 1,
-        // snap: 1 / (sections.length - 1),
-        end: () => "+=" + document.querySelector(".thecontainer").offsetWidth
-      }
-    });
-
+    var container = document.querySelector(".thecontainer");
+    if (container) {
+      gsap.to(sections, {
+        xPercent: -100 * (sections.length - 1),
+        ease: "none",
+        scrollTrigger: {
+          trigger: container,
+          pin: true,
+          scrub: 1,
+          // snap: 1 / (sections.length - 1),
+          end: () => "+=" + container.offsetWidth
+        }
+      });
+    } else {
+      console.error('Element with class "thecontainer" not found');
+    }
   }
 });
