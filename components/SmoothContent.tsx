@@ -1,6 +1,10 @@
-import React, { FC } from 'react';
+import React, { FC, ReactNode } from 'react';
 
-const SmoothContent: FC = ({ children }) => {
+interface SmoothContentProps {
+    children: ReactNode;
+}
+
+const SmoothContent: FC<SmoothContentProps> = ({ children }) => {
     return <div id="smooth-content">{children}</div>;
 };
 
