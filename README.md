@@ -70,7 +70,7 @@ Pastikan Anda telah menginstal:
 ## Pratinjau
 
 Anda dapat melihat pratinjau web pengembangan di sini:
-🔗 [Preview Sunahedits](https://sunahedits-8xo8-git-main-chrozagamings-projects.vercel.app/)
+🔗 [Preview Sunahedits](https://sunahedits.vercel.app/)
 
 ## Struktur Proyek
 
