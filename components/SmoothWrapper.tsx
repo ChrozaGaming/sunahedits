@@ -6,10 +6,16 @@ import MarqueeSection from './MarqueeSection';
 import ServicesSection from './ServicesSection';
 import BoxLight from './BoxLight';
 import BoxDark from './BoxDark';
+import styled from 'styled-components';
+
+const Wrapper = styled.div`
+    overflow-x: hidden;
+    width: 100%;
+`;
 
 const SmoothWrapper: FC = () => {
     return (
-        <div id="smooth-wrapper">
+        <Wrapper id="smooth-wrapper">
             <SmoothContent>
                 <Header />
                 <PortfolioSection />
@@ -19,7 +25,7 @@ const SmoothWrapper: FC = () => {
                 <BoxDark />
                 {/* Konten lainnya bisa ditambahkan di sini */}
             </SmoothContent>
-        </div>
+        </Wrapper>
     );
 };
 

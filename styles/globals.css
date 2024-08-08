@@ -24,7 +24,24 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+    overflow-x: hidden;
 }
+
+#smooth-wrapper {
+  overflow-x: hidden;
+  width: 100%;
+}
+
+.swiper-slide {
+  overflow-x: hidden;
+  max-width: 100%;
+}
+
+.item {
+  overflow-x: hidden;
+  max-width: 100%;
+}
+
 
 @layer utilities {
   .text-balance {
