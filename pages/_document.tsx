@@ -20,35 +20,33 @@ class MyDocument extends Document {
                     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
                 </Head>
                 <body>
-                <Main />
-                <NextScript />
-                {/* jQuery */}
-                <Script src="/assets/common/js/lib/jquery-3.6.0.min.js" strategy="beforeInteractive" />
-                <Script src="/assets/common/js/lib/jquery-migrate-3.4.0.min.js" strategy="beforeInteractive" />
-                <Script src="/assets/common2/js/lib/jquery-3.6.0.min.js" strategy="beforeInteractive" />
-                <Script src="/assets/common2/js/lib/jquery-migrate-3.4.0.min.js" strategy="beforeInteractive" />
+                    <Main />
+                    <NextScript />
+                    {/* jQuery */}
+                    <Script src="https://code.jquery.com/jquery-3.6.0.min.js" strategy="beforeInteractive" />
+                    <Script src="https://code.jquery.com/jquery-migrate-3.4.0.min.js" strategy="beforeInteractive" />
 
-                {/* Plugins */}
-                <Script src="/assets/common/js/lib/plugins.js" strategy="lazyOnload" />
-                <Script src="/assets/common2/js/lib/plugins.js" strategy="lazyOnload" />
+                    {/* Plugins */}
+                    <Script src="/assets/common/js/lib/plugins.js" strategy="lazyOnload" />
+                    <Script src="/assets/common2/js/lib/plugins.js" strategy="lazyOnload" />
 
-                {/* GSAP */}
-                <Script src="/assets/common/js/gsap_lib/gsap.min.js" strategy="lazyOnload" />
-                <Script src="/assets/common/js/gsap_lib/ScrollSmoother.min.js" strategy="lazyOnload" />
-                <Script src="/assets/common/js/gsap_lib/ScrollTrigger.min.js" strategy="lazyOnload" />
-                <Script src="/assets/common/js/gsap_lib/SplitText.min.js" strategy="lazyOnload" />
-                <Script src="/assets/common2/js/gsap_lib/gsap.min.js" strategy="lazyOnload" />
-                <Script src="/assets/common2/js/gsap_lib/ScrollSmoother.min.js" strategy="lazyOnload" />
-                <Script src="/assets/common2/js/gsap_lib/ScrollTrigger.min.js" strategy="lazyOnload" />
-                <Script src="/assets/common2/js/gsap_lib/SplitText.min.js" strategy="lazyOnload" />
+                    {/* GSAP */}
+                    <Script src="/assets/common/js/gsap_lib/gsap.min.js" strategy="lazyOnload" />
+                    <Script src="/assets/common/js/gsap_lib/ScrollSmoother.min.js" strategy="lazyOnload" />
+                    <Script src="/assets/common/js/gsap_lib/ScrollTrigger.min.js" strategy="lazyOnload" />
+                    <Script src="/assets/common/js/gsap_lib/SplitText.min.js" strategy="lazyOnload" />
+                    <Script src="/assets/common2/js/gsap_lib/gsap.min.js" strategy="lazyOnload" />
+                    <Script src="/assets/common2/js/gsap_lib/ScrollSmoother.min.js" strategy="lazyOnload" />
+                    <Script src="/assets/common2/js/gsap_lib/ScrollTrigger.min.js" strategy="lazyOnload" />
+                    <Script src="/assets/common2/js/gsap_lib/SplitText.min.js" strategy="lazyOnload" />
 
-                {/* Common Scripts */}
-                <Script src="/assets/common/js/common_scripts.js" strategy="lazyOnload" />
-                {/* <Script src="/assets/common2/js/common_scripts.js" strategy="lazyOnload" /> */}
+                    {/* Common Scripts */}
+                    <Script src="/assets/common/js/common_scripts.js" strategy="lazyOnload" />
+                    {/* <Script src="/assets/common2/js/common_scripts.js" strategy="lazyOnload" /> */}
 
-                {/* Custom Scripts */}
-                <Script src="/assets/js/scripts.js" strategy="lazyOnload" />
-                <Script src="/assets2/js/hscroll.js" strategy="lazyOnload" />
+                    {/* Custom Scripts */}
+                    <Script src="/assets/js/scripts.js" strategy="lazyOnload" />
+                    <Script src="/assets2/js/hscroll.js" strategy="lazyOnload" />
                 </body>
             </Html>
         );
