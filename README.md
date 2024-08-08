@@ -1,40 +1,92 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Sunahedits
 
-## Getting Started
+🎨 Sunahedits adalah web portfolio berbasis Next.js dan React Typescript. Web ini dirancang untuk menampilkan karya dan proyek secara profesional dan interaktif.
 
-First, run the development server:
+## Fitur
+- **Next.js**: Framework React yang digunakan untuk membangun aplikasi web yang efisien dan cepat.
+- **Typescript**: Bahasa pemrograman yang menambahkan tipe pada JavaScript, meningkatkan keandalan dan keterbacaan kode.
+- **React**: Pustaka JavaScript untuk membangun antarmuka pengguna.
+- **Responsive Design**: Tampilan yang menyesuaikan dengan berbagai ukuran layar.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Persyaratan
+Pastikan Anda telah menginstal:
+- Node.js versi 12 atau lebih baru
+- npm atau yarn sebagai manajer paket
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Instalasi
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+1. Clone repository ini:
+    ```bash
+    git clone https://github.com/ChrozaGaming/sunahedits.git
+    ```
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+2. Masuk ke direktori proyek:
+    ```bash
+    cd sunahedits
+    ```
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+3. Instal dependensi:
+    ```bash
+    npm install
+    ```
+    atau
+    ```bash
+    yarn install
+    ```
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Menjalankan Aplikasi
 
-## Learn More
+1. Jalankan server pengembangan:
+    ```bash
+    npm run dev
+    ```
+    atau
+    ```bash
+    yarn dev
+    ```
 
-To learn more about Next.js, take a look at the following resources:
+2. Buka [http://localhost:3000](http://localhost:3000) di browser Anda untuk melihat aplikasi.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Build untuk Produksi
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+1. Build aplikasi untuk produksi:
+    ```bash
+    npm run build
+    ```
+    atau
+    ```bash
+    yarn build
+    ```
 
-## Deploy on Vercel
+2. Jalankan server produksi:
+    ```bash
+    npm start
+    ```
+    atau
+    ```bash
+    yarn start
+    ```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Pratinjau
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Anda dapat melihat pratinjau web pengembangan di sini:
+🔗 [Preview Sunahedits](https://sunahedits-8xo8-git-main-chrozagamings-projects.vercel.app/)
+
+## Struktur Proyek
+
+📁 `pages/`: Direktori ini berisi semua halaman Next.js.
+📁 `components/`: Direktori ini berisi komponen React yang digunakan dalam aplikasi.
+📁 `public/`: Direktori ini berisi aset statis seperti gambar dan favicon.
+📁 `styles/`: Direktori ini berisi file CSS.
+
+## Kontribusi
+
+🙏 Kontribusi sangat kami hargai! Silakan buat pull request atau buka issue untuk ide atau perbaikan.
+
+## Lisensi
+
+📜 Proyek ini dilisensikan di bawah lisensi MIT. Lihat file [LICENSE](./LICENSE) untuk informasi lebih lanjut.
+
+---
+
+© 2024 [ChrozaGaming](https://github.com/ChrozaGaming)
