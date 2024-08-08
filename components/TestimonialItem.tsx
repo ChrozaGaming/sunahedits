@@ -10,8 +10,8 @@ interface TestimonialItemProps {
 
 const TestimonialItem: FC<TestimonialItemProps> = ({ text, role, name, image, styleClass }) => {
     return (
-        <div className={`swiper-slide`}>
-            <div className={`item ${styleClass}`}>
+        <div className={`swiper-slide ${styleClass}`}>
+            <div className="item">
                 <div>
                     <h6>{text}</h6>
                 </div>

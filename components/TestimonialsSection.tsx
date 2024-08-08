@@ -1,5 +1,10 @@
 import React, { FC } from 'react';
 import TestimonialItem from './TestimonialItem';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation, Pagination } from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
 
 const TestimonialsSection: FC = () => {
     const testimonials = [
@@ -53,35 +58,50 @@ const TestimonialsSection: FC = () => {
                             <h6>
                                 4.9/5
                                 <span className="stars">
-                  <i className="fas fa-star"></i>
-                  <i className="fas fa-star"></i>
-                  <i className="fas fa-star"></i>
-                  <i className="fas fa-star"></i>
-                  <i className="fas fa-star"></i>
-                </span>
+                                    <i className="fas fa-star"></i>
+                                    <i className="fas fa-star"></i>
+                                    <i className="fas fa-star"></i>
+                                    <i className="fas fa-star"></i>
+                                    <i className="fas fa-star"></i>
+                                </span>
                             </h6>
                             <p>Based on 24 reviews on <a href="#0">Clutch</a></p>
                         </div>
                     </div>
                 </div>
-                <div className="swiper testim-swiper swiper-container">
-                    <div className="swiper-wrapper">
-                        {testimonials.map((testimonial, index) => (
+                <Swiper
+                    modules={[Navigation, Pagination]}
+                    loop={false} // Aktifkan kembali loop
+                    slidesPerView={2}
+                    spaceBetween={10}
+                    pagination={{ clickable: false }}
+                    navigation={true}
+                    className="testim-swiper"
+                    observer={true} // Tambahkan ini
+                    observeParents={true} // Tambahkan ini
+                    breakpoints={{
+                        320: { slidesPerView: 1 }, // untuk layar kecil
+                        640: { slidesPerView: 2 }, // untuk layar sedang
+                        768: { slidesPerView: 3 }, // untuk layar tablet
+                        1024: { slidesPerView: 5 } // untuk layar besar
+                    }}
+                >
+                    {testimonials.map((testimonial, index) => (
+                        <SwiperSlide key={index}>
                             <TestimonialItem
-                                key={index}
                                 text={testimonial.text}
                                 role={testimonial.role}
                                 name={testimonial.name}
                                 image={testimonial.image}
                                 styleClass={testimonial.styleClass}
                             />
-                        ))}
-                    </div>
-                </div>
+                        </SwiperSlide>
+                    ))}
+                </Swiper>
             </div>
             <span className="brush">
-        <img src="assets/imgs/header/brush.svg" alt="Brush" />
-      </span>
+                <img src="assets/imgs/header/brush.svg" alt="Brush" />
+            </span>
         </div>
     );
 };

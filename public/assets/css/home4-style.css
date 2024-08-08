@@ -744,6 +744,11 @@
 }
 
 body {
+  overflow-x: hidden; /* Pastikan overflow-x disetel ke hidden */
+  overflow-y: auto;
+  height: 100%;
+  margin: 0;
+  padding: 0;
   font-family: "Inter", sans-serif;
   font-size: 18px;
   line-height: 1.5;
@@ -1007,17 +1012,32 @@ p {
     margin-top: 30px;
   }
   .testimonials-mp .swiper-slide {
-    width: 100%;
-    padding: 0 10px;
-    margin: 0;
+    margin-right: -50px;
+    width: 400px;
+    height: auto;
+    overflow: hidden; /* Tambahkan ini */
   }
+
+  .testimonial-item {
+    overflow: hidden; /* Tambahkan ini */
+    max-width: 100%;
+    width: 100%;
+    box-sizing: border-box; /* Tambahkan ini untuk memastikan padding dan border dihitung dalam lebar */
+  }
+  
   .testimonials-mp .swiper-slide .item {
     -webkit-transform: none !important;
     -ms-transform: none !important;
     transform: none !important;
   }
   .testimonials-mp .testim-swiper {
-    padding: 0;
+    position: relative;
+    overflow: hidden; /* Tambahkan ini */
+    padding: 150px 0 250px;
+    background-image: url(../imgs/testim/global.png);
+    background-size: 60%;
+    background-position: center center;
+    background-repeat: no-repeat;
   }
   .brands-mp .item:after {
     display: none;

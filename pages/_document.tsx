@@ -15,6 +15,12 @@ class MyDocument extends Document {
                     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet" />
                     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet" />
                     <link href="https://fonts.googleapis.com/css2?family=Six+Caps&display=swap" rel="stylesheet" />
+                    
+                    {/* Swiper CSS */}
+                    <link
+                        rel="stylesheet"
+                        href="https://unpkg.com/swiper/swiper-bundle.min.css"
+                    />
 
                     {/* Font Awesome */}
                     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
@@ -22,10 +28,14 @@ class MyDocument extends Document {
                 <body>
                     <Main />
                     <NextScript />
+                    
                     {/* jQuery */}
                     <Script src="https://code.jquery.com/jquery-3.6.0.min.js" strategy="beforeInteractive" />
                     <Script src="https://code.jquery.com/jquery-migrate-3.4.0.min.js" strategy="beforeInteractive" />
-
+                    
+                    {/* Swiper JS */}
+                    <Script src="https://unpkg.com/swiper/swiper-bundle.min.js" strategy="beforeInteractive" />
+                    
                     {/* Plugins */}
                     <Script src="/assets/common/js/lib/plugins.js" strategy="lazyOnload" />
                     <Script src="/assets/common2/js/lib/plugins.js" strategy="lazyOnload" />

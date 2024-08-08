@@ -17,6 +17,20 @@
 }
 
 body {
+  overflow-x: hidden; /* Pastikan overflow-x disetel ke hidden */
+  overflow-y: auto;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: "Inter", sans-serif;
+  font-size: 18px;
+  line-height: 1.5;
+  font-weight: 400;
+  color: #ffffff;
+  background-color: var(--theme-color);
+}
+
+body {
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
       to bottom,
@@ -24,6 +38,62 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+}
+
+#smooth-wrapper {
+  overflow-x: hidden;
+  overflow-y: auto;
+  width: 100%;
+  height: 100%;
+}
+
+.testimonials-mp {
+  overflow-x: hidden;
+  max-width: 100%;
+}
+
+.testimonial-item {
+  overflow: hidden; /* Tambahkan ini */
+  max-width: 100%;
+  width: 100%;
+  box-sizing: border-box; /* Tambahkan ini untuk memastikan padding dan border dihitung dalam lebar */
+}
+
+.testim-swiper {
+  overflow: hidden; /* Pastikan overflow disetel ke hidden */
+  max-width: 100%;
+  width: 100%;
+}
+
+.swiper-container {
+  overflow: hidden; /* Pastikan overflow disetel ke hidden */
+  max-width: 100%;
+  width: 100%;
+}
+
+.swiper-wrapper {
+  overflow: hidden; /* Pastikan overflow disetel ke hidden */
+  max-width: 100%;
+  width: 100%;
+}
+
+.swiper-slide {
+  overflow: hidden; /* Pastikan overflow disetel ke hidden */
+  max-width: 100%;
+  width: 100%;
+  box-sizing: border-box; /* Tambahkan ini untuk memastikan padding dan border dihitung dalam lebar */
+}
+
+.item {
+  overflow: hidden;
+  max-width: 100%;
+  padding: 20px; /* Tambahkan padding untuk menghindari konten terpotong */
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: auto; /* Pastikan tinggi sesuai dengan konten */
 }
 
 @layer utilities {
