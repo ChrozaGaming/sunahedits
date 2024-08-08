@@ -11,12 +11,16 @@ interface TestimonialItemProps {
 
 const SwiperSlide = styled.div`
     overflow-x: hidden;
+    overflow-y: hidden;
     max-width: 100%;
+    height: 100%;
 `;
 
 const Item = styled.div`
     overflow-x: hidden;
+    overflow-y: hidden;
     max-width: 100%;
+    height: 100%;
 `;
 
 const TestimonialItem: FC<TestimonialItemProps> = ({ text, role, name, image, styleClass }) => {
