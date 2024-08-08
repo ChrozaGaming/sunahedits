@@ -1,21 +1,5 @@
 import React, { FC } from 'react';
-import styled from 'styled-components';
 import TestimonialItem from './TestimonialItem';
-
-const TestimonialsWrapper = styled.div`
-    overflow-x: hidden;
-    max-width: 100%;
-`;
-
-const SwiperContainer = styled.div`
-    overflow-x: hidden;
-    max-width: 100%;
-`;
-
-const SwiperWrapper = styled.div`
-    overflow-x: hidden;
-    max-width: 100%;
-`;
 
 const TestimonialsSection: FC = () => {
     const testimonials = [
@@ -57,7 +41,7 @@ const TestimonialsSection: FC = () => {
     ];
 
     return (
-        <TestimonialsWrapper className="testimonials-mp section-padding">
+        <div className="testimonials-mp section-padding">
             <div className="container-fluid">
                 <div className="sec-head text-center mb-80">
                     <h2><span>Client’s</span> reviews</h2>
@@ -69,19 +53,19 @@ const TestimonialsSection: FC = () => {
                             <h6>
                                 4.9/5
                                 <span className="stars">
-                                    <i className="fas fa-star"></i>
-                                    <i className="fas fa-star"></i>
-                                    <i className="fas fa-star"></i>
-                                    <i className="fas fa-star"></i>
-                                    <i className="fas fa-star"></i>
-                                </span>
+                  <i className="fas fa-star"></i>
+                  <i className="fas fa-star"></i>
+                  <i className="fas fa-star"></i>
+                  <i className="fas fa-star"></i>
+                  <i className="fas fa-star"></i>
+                </span>
                             </h6>
                             <p>Based on 24 reviews on <a href="#0">Clutch</a></p>
                         </div>
                     </div>
                 </div>
-                <SwiperContainer className="swiper testim-swiper swiper-container">
-                    <SwiperWrapper className="swiper-wrapper">
+                <div className="swiper testim-swiper swiper-container">
+                    <div className="swiper-wrapper">
                         {testimonials.map((testimonial, index) => (
                             <TestimonialItem
                                 key={index}
@@ -92,13 +76,13 @@ const TestimonialsSection: FC = () => {
                                 styleClass={testimonial.styleClass}
                             />
                         ))}
-                    </SwiperWrapper>
-                </SwiperContainer>
+                    </div>
+                </div>
             </div>
             <span className="brush">
-                <img src="assets/imgs/header/brush.svg" alt="Brush" />
-            </span>
-        </TestimonialsWrapper>
+        <img src="assets/imgs/header/brush.svg" alt="Brush" />
+      </span>
+        </div>
     );
 };
 

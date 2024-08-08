@@ -1,5 +1,4 @@
 import React, { FC } from 'react';
-import styled from 'styled-components';
 
 interface TestimonialItemProps {
     text: string;
@@ -9,24 +8,10 @@ interface TestimonialItemProps {
     styleClass: string;
 }
 
-const SwiperSlide = styled.div`
-    overflow-x: hidden;
-    overflow-y: hidden;
-    max-width: 100%;
-    height: 100%;
-`;
-
-const Item = styled.div`
-    overflow-x: hidden;
-    overflow-y: hidden;
-    max-width: 100%;
-    height: 100%;
-`;
-
 const TestimonialItem: FC<TestimonialItemProps> = ({ text, role, name, image, styleClass }) => {
     return (
-        <SwiperSlide className="swiper-slide">
-            <Item className={`item ${styleClass}`}>
+        <div className={`swiper-slide`}>
+            <div className={`item ${styleClass}`}>
                 <div>
                     <h6>{text}</h6>
                 </div>
@@ -41,8 +26,8 @@ const TestimonialItem: FC<TestimonialItemProps> = ({ text, role, name, image, st
                         </div>
                     </div>
                 </div>
-            </Item>
-        </SwiperSlide>
+            </div>
+        </div>
     );
 };
 
